@@ -1,35 +1,35 @@
-   const questions = [
+  const questions = [
       {
         question: "What is the capital of France?",
         choices: ["Paris", "London", "Berlin", "Madrid"],
-        correct: "Paris"
+        answer: "Paris",
       },
       {
-        question: "What is 2 + 2?",
-        choices: ["3", "4", "5", "6"],
-        correct: "4"
+        question: "What is the highest mountain in the world?",
+        choices: ["Everest", "Kilimanjaro", "Denali", "Matterhorn"],
+        answer: "Everest",
       },
       {
-        question: "Which planet is known as the Red Planet?",
-        choices: ["Earth", "Mars", "Jupiter", "Saturn"],
-        correct: "Mars"
+        question: "What is the largest country by area?",
+        choices: ["Russia", "China", "Canada", "United States"],
+        answer: "Russia",
       },
       {
-        question: "What is the largest ocean on Earth?",
-        choices: ["Atlantic", "Indian", "Arctic", "Pacific"],
-        correct: "Pacific"
+        question: "Which is the largest planet in our solar system?",
+        choices: ["Earth", "Jupiter", "Mars"],
+        answer: "Jupiter",
       },
       {
-        question: "Who wrote 'To Be, or Not to Be'?",
-        choices: ["Shakespeare", "Hemingway", "Tolstoy", "Twain"],
-        correct: "Shakespeare"
-      }
+        question: "What is the capital of Canada?",
+        choices: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+        answer: "Ottawa",
+      },
     ];
 
     document.addEventListener('DOMContentLoaded', () => {
-      const quizContainer = document.getElementById('questions');
-      const scoreContainer = document.getElementById('score');
-      const submitBtn = document.getElementById('submit');
+      const quizContainer = document.getElementById('quiz-container');
+      const scoreContainer = document.getElementById('score-container');
+      const submitBtn = document.getElementById('submit-btn');
 
       // Load progress from session storage
       const loadProgress = () => JSON.parse(sessionStorage.getItem('progress')) || {};
@@ -62,7 +62,7 @@
             if (userAnswers[`question-${i}`] === choice) {
               choiceElement.setAttribute("checked", true);
             }
-            const choiceText = document.createTextNode(choice);
+            const choiceText = documehttps://www.svgrepo.com/show/345221/three-dots.svgnt.createTextNode(choice);
             questionElement.appendChild(choiceElement);
             questionElement.appendChild(choiceText);
           }
@@ -75,7 +75,7 @@
         const userAnswers = loadProgress();
         let score = 0;
         for (let i = 0; i < questions.length; i++) {
-          if (userAnswers[`question-${i}`] === questions[i].correct) {
+          if (userAnswers[`question-${i}`] === questions[i].answer) {
             score++;
           }
         }
@@ -105,4 +105,3 @@
       // Initial render of questions
       renderQuestions();
     });
- 
