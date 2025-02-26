@@ -1,1 +1,88 @@
 /*  your css code here. If applicable */
+/*  your css code here. If applicable */
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Quiz Container */
+#questions {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Each Question */
+#questions div {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+/* Style for Radio Buttons and Choices */
+input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Styling for Submit Button */
+#submit {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+#submit:hover {
+  background-color: #45a049;
+}
+
+/* Styling for Score Display */
+#score {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  #questions {
+    padding: 15px;
+  }
+
+  #submit {
+    width: 100%;
+    padding: 12px;
+  }
